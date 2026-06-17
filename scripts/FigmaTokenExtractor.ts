@@ -43,6 +43,7 @@ const DEFAULT_FONT_FAMILY_MAP = {
 
 const MAPPED_TOKEN_SET_PREFIX = 'Mapped/'
 const RESPONSIVE_THEME_KEY = 'NOT-IMPORTANT'
+const SKIPPED_TOKEN_MARKER = '\u2198\uFE0E'
 
 /**
  * Converts Figma token JSON into CSS custom properties.
@@ -281,7 +282,7 @@ export class FigmaTokenExtractor {
     cssLines: string[],
   ): void {
     for (const [tokenName, token] of Object.entries(categoryObj)) {
-      if (tokenName.includes('↘︎')) {
+      if (tokenName.includes(SKIPPED_TOKEN_MARKER)) {
         continue
       }
 
