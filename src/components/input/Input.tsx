@@ -8,11 +8,9 @@ interface InputFieldProps extends Omit<
   ComponentPropsWithoutRef<'input'>,
   'onBlur' | 'onFocus' | 'type'
 > {
-  label: string
   error?: boolean
   success?: boolean
   disabled?: boolean
-  required?: boolean
   type?: 'text' | 'email'
   value?: string
   clearable?: boolean
@@ -21,11 +19,9 @@ interface InputFieldProps extends Omit<
 
 export default function Input(props: Readonly<InputFieldProps>) {
   const {
-    label,
     error,
     success,
     disabled,
-    required,
     clearable,
     onInput,
     value,
@@ -57,17 +53,6 @@ export default function Input(props: Readonly<InputFieldProps>) {
     setInternalValue('')
   }
 
-  const isFloating = isFocused || hasValue
-  const state = disabled ? 'disabled' : error ? 'error' : 'default'
-
-  const labelStyles = {
-    default: isFloating
-      ? 'text-[var(--text-colour-body)]'
-      : 'text-[var(--text-colour-passive)]',
-    error: 'text-[var(--text-colour-error)]',
-    disabled: 'text-[var(--text-colour-disabled)]',
-  }
-
   return (
     <div class={clsx(fill ? 'w-full' : 'w-fit', 'space-y-1')}>
       <div
@@ -92,27 +77,6 @@ export default function Input(props: Readonly<InputFieldProps>) {
           },
         )}
       >
-        <label
-          htmlFor={props.id}
-          class={clsx(
-            'absolute  transition-all duration-200 pointer-events-none',
-            isFloating
-              ? '-top-2 left-3 text-[10px] font-medium px-1'
-              : 'top-1/2 left-3 -translate-y-1/2 text-sm',
-            labelStyles[state],
-            {
-              // Below is purely for the background handling.
-              'bg-white': isFloating && !disabled && !hasValue,
-              'bg-linear-to-b from-white from-50% to-(--surface-colour-page) to-50%':
-                isFloating && !disabled && hasValue,
-              'bg-transparent text-(--text-colour-disabled)':
-                isFloating && disabled,
-            },
-          )}
-        >
-          {label}
-        </label>
-
         <input
           {...rest}
           type={type}
@@ -131,7 +95,6 @@ export default function Input(props: Readonly<InputFieldProps>) {
             'bg-transparent text-(--text-colour-active)',
           )}
           aria-invalid={error ? 'true' : undefined}
-          aria-required={required ? 'true' : undefined}
           aria-disabled={disabled ? 'true' : undefined}
         />
 
@@ -159,12 +122,6 @@ export default function Input(props: Readonly<InputFieldProps>) {
           </div>
         )}
       </div>
-
-      {required && (
-        <p class="[font-size:var(--res-mobile-font-size-body-xs)] text-(--text-colour-body)">
-          <span class="text-(--text-colour-warning) ">*</span>required
-        </p>
-      )}
     </div>
   )
 }

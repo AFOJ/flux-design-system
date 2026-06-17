@@ -8,24 +8,20 @@ interface Option {
 }
 
 interface DropdownProps {
-  label: string
   options: Option[]
   icon?: IconKey
   value?: string
   disabled?: boolean
-  required?: boolean
   onChange?: (value: string) => void
   class?: string
 }
 
 export default function Dropdown(props: Readonly<DropdownProps>) {
   const {
-    label,
     options,
     icon,
     value,
     disabled,
-    required,
     class: className,
     onChange,
   } = props
@@ -40,7 +36,6 @@ export default function Dropdown(props: Readonly<DropdownProps>) {
 
   const selectedOption = options.find((opt) => opt.value === selectedValue)
   const hasValue = !!selectedValue
-  const isFloating = isFocused || isOpen || hasValue
 
   const handleToggle = () => !disabled && setIsOpen(!isOpen)
 
@@ -141,27 +136,6 @@ export default function Dropdown(props: Readonly<DropdownProps>) {
         )}
       >
         <div class="flex items-center gap-3 flex-1 min-w-0 overflow-hidden">
-          <label
-            class={clsx(
-              'absolute transition-all duration-200 pointer-events-none px-1',
-              {
-                '-top-2 left-3 [font-size:var(--res-mobile-font-size-body-xs)] font-(--font-font-weight-paragraph-regular)':
-                  isFloating,
-                'top-1/2 -translate-y-1/2 [font-size:var(--res-mobile-font-size-body-md)] font-(--font-font-weight-paragraph-medium) text-(--text-colour-passive)':
-                  !isFloating,
-                'left-9': !isFloating && icon,
-                'left-2': !isFloating && !icon,
-                // Below is purely for the background handling.
-                'bg-white': isFloating && !disabled && !hasValue,
-                'bg-linear-to-b from-white from-50% to-(--surface-colour-page) to-50%':
-                  isFloating && !disabled && hasValue,
-                'bg-transparent text-(--text-colour-disabled)':
-                  isFloating && disabled,
-              },
-            )}
-          >
-            {label}
-          </label>
 
           {icon && (
             <span
@@ -246,12 +220,6 @@ export default function Dropdown(props: Readonly<DropdownProps>) {
           </ul>
         )}
       </div>
-
-      {required && (
-        <p class="[font-size:var(--res-mobile-font-size-body-xs)] text-(--text-colour-body) font-light">
-          <span class="text-(--text-colour-warning)">*</span>required
-        </p>
-      )}
     </div>
   )
 }

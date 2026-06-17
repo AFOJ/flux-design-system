@@ -5,6 +5,7 @@ import Card from '../card'
 import clsx from 'clsx'
 import Dropdown from '../dropdown/Dropdown'
 import Input from '../input'
+import Label from '../label'
 
 interface LoginDrawerProps {
   onClose?: () => void
@@ -107,15 +108,25 @@ export default function LoginDrawer(props: Readonly<LoginDrawerProps>) {
           'space-y-(--res-mobile-spacing-2xl) sm:space-y-(--res-desktop-spacing-xl)'
         }
       >
-        <Dropdown
-          label="Customer Type"
-          options={[
-            { label: 'Customer 1', value: 'cust-1' },
-            { label: 'Customer 2', value: 'cust-2' },
-          ]}
-        />
 
-        <Input id={'email-input'} label="Email" type="email" fill />
+        <div class={"gap-1"}>
+          <Label htmlFor="email-input">Email</Label>
+          <Input id={'email-input'} type="email" fill />
+        </div>
+
+        <div class={"gap-1"}>
+          <Label htmlFor="customer-type-input">Customer Type</Label>
+          <Dropdown
+            options={[
+              { label: 'Customer 1', value: 'cust-1' },
+              { label: 'Customer 2', value: 'cust-2' },
+            ]}
+          />
+        </div>
+
+
+
+
       </form>
 
       <div
@@ -130,7 +141,7 @@ export default function LoginDrawer(props: Readonly<LoginDrawerProps>) {
       <Card
         mainText="Join the family."
         ctaText="Become a member"
-        onCtaClick={() => {}}
+        onCtaClick={() => { }}
         icon="user"
         fill
       />

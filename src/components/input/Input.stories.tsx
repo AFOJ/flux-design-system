@@ -6,10 +6,6 @@ const meta: Meta<typeof Input> = {
   component: Input,
   tags: ['autodocs'],
   argTypes: {
-    label: {
-      control: 'text',
-      description: 'The label for the input field',
-    },
 
     error: {
       control: 'boolean',
@@ -88,27 +84,21 @@ type Story = StoryObj<typeof Input>
 export const Default: Story = {
   args: {
     id: 'default-input',
-    label: 'Default',
-    required: true,
   },
 }
 
 export const Filled: Story = {
   args: {
     id: 'filled-input',
-    label: 'Filled Input',
-    value: 'Filled',
-    required: true,
+    value: 'Edit Me',
     clearable: true,
   },
 }
 
-export const Error: Story = {
+export const Invalid: Story = {
   args: {
-    id: 'error-input',
-    label: 'Error Input',
-    value: 'Error',
-    required: true,
+    id: 'invalid-input',
+    value: 'Invalid',
     error: true,
   },
 }
@@ -116,8 +106,7 @@ export const Error: Story = {
 export const Disabled: Story = {
   args: {
     id: 'disabled-input',
-    label: 'Disabled Input',
-    value: 'Disabled',
+    value: 'Can\'t Edit Me',
     disabled: true,
     clearable: true,
   },
@@ -126,7 +115,6 @@ export const Disabled: Story = {
 export const Success: Story = {
   args: {
     id: 'success-input',
-    label: 'Success Input',
     value: 'Success',
     success: true,
     clearable: true,
