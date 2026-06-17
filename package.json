@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:design-tokens": "node ./scripts/extract-figma-tokens.js",
+    "build:design-tokens": "node ./scripts/extract-figma-tokens.ts",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
