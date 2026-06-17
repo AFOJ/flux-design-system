@@ -3,8 +3,8 @@ import { styleText } from 'node:util'
 
 import { FigmaTokenExtractor } from './FigmaTokenExtractor.ts'
 
-const INPUT_PATH = './scripts/figma-tokens.json'
-const OUTPUT_PATH = './scripts/tokens.css'
+const INPUT_PATH = './scripts/token-extractor/figma-tokens.json'
+const OUTPUT_PATH = './scripts/token-extractor/tokens.css'
 
 try {
   const figmaTokens = JSON.parse(fs.readFileSync(INPUT_PATH, 'utf8')) as unknown

@@ -123,4 +123,4 @@ To generate new theme variables:
 npm run build:design-tokens
 ```
 
-Then copy the content of the generated css in `script/token.css` into `src/global.css`.
+Then copy the content of the generated css in `script/token-extractor/token.css` into `src/global.css`.
