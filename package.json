@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:design-tokens": "node ./scripts/extract-figma-tokens.ts",
+    "build:design-tokens": "node ./scripts/token-extractor/extract-figma-tokens.ts",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
