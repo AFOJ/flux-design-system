@@ -123,4 +123,10 @@ To generate new theme variables:
 npm run build:design-tokens
 ```
 
-Then copy the content of the generated css in `script/token-extractor/token.css` into `src/global.css`.
+Then copy the content of the generated css in `scripts/token-extractor/tokens.css` into `src/global.css`.
+
+### Token Extractor
+
+The design-token pipeline lives in `scripts/token-extractor`. It exposes a reusable `FigmaTokenExtractor` class, a small CLI wrapper, and Jest coverage for the conversion rules.
+
+For the full extractor API, conversion rules, and test notes, see [`scripts/token-extractor/README.md`](scripts/token-extractor/README.md).
