@@ -27,3 +27,4 @@ dist-ssr
 storybook-static
 
 scripts/tokens.css
+scripts/token-extractor/tokens.css
