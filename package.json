@@ -24,7 +24,7 @@
     "@storybook/preact-vite": "^10.1.11",
     "@tailwindcss/vite": "^4.1.18",
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.10.1",
+    "@types/node": "^25.9.3",
     "jest": "^30.4.2",
     "storybook": "^10.1.11",
     "tailwindcss": "^4.1.18",
