@@ -117,6 +117,7 @@ export default function LoginDrawer(props: Readonly<LoginDrawerProps>) {
         <div class={"gap-1"}>
           <Label htmlFor="customer-type-input">Customer Type</Label>
           <Dropdown
+          id='customer-type-input'
             options={[
               { label: 'Customer 1', value: 'cust-1' },
               { label: 'Customer 2', value: 'cust-2' },

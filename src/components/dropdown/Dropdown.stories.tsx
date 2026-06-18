@@ -84,7 +84,7 @@ export const WithLabel: Story = {
       <div class={"p-6 flex flex-col gap-1"}>
 
         <Label htmlFor="owner-dropdown">Choose Owner </Label>
-        <Dropdown {...args} />
+        <Dropdown id='owner-dropdown' {...args} />
       </div>
     )
   },
@@ -101,7 +101,7 @@ export const Required: Story = {
       <div class={"p-6 flex flex-col gap-1"}>
         <Label htmlFor="owner-dropdown">Choose Owner <RequiredComponent /></Label>
 
-        <Dropdown {...args} />
+        <Dropdown id='owner-dropdown' {...args} />
       </div>
     )
   },

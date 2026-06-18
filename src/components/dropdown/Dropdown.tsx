@@ -8,6 +8,7 @@ interface Option {
 }
 
 interface DropdownProps {
+  id?: string
   options: Option[]
   icon?: IconKey
   value?: string
@@ -18,6 +19,7 @@ interface DropdownProps {
 
 export default function Dropdown(props: Readonly<DropdownProps>) {
   const {
+    id,
     options,
     icon,
     value,
@@ -108,6 +110,7 @@ export default function Dropdown(props: Readonly<DropdownProps>) {
       onKeyDown={handleKeyDown}
     >
       <button
+        id={id}
         type="button"
         onClick={handleToggle}
         disabled={disabled}
