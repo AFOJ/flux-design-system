@@ -109,12 +109,12 @@ export default function LoginDrawer(props: Readonly<LoginDrawerProps>) {
         }
       >
 
-        <div class={"gap-1"}>
+        <div class={"flex flex-col gap-1"}>
           <Label htmlFor="email-input">Email</Label>
           <Input id={'email-input'} type="email" fill />
         </div>
 
-        <div class={"gap-1"}>
+        <div class={"flex flex-col gap-1"}>
           <Label htmlFor="customer-type-input">Customer Type</Label>
           <Dropdown
           id='customer-type-input'
