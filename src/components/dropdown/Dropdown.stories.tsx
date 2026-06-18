@@ -1,3 +1,5 @@
+import Label from '../label'
+import RequiredComponent from '../required'
 import Dropdown from './Dropdown'
 import type { Meta, StoryObj } from '@storybook/preact'
 
@@ -11,13 +13,6 @@ const meta: Meta<typeof Dropdown> = {
   component: Dropdown,
   tags: ['autodocs'],
   argTypes: {
-    label: {
-      control: 'text',
-      description: 'The label for the dropdown',
-      table: {
-        type: { summary: 'string' },
-      },
-    },
 
     options: {
       control: 'object',
@@ -36,15 +31,6 @@ const meta: Meta<typeof Dropdown> = {
     value: {
       control: 'text',
       description: 'The current value of the dropdown',
-    },
-
-    required: {
-      control: 'boolean',
-      description: 'Whether the dropdown field is required.',
-      table: {
-        type: { summary: 'boolean' },
-        defaultValue: { summary: 'false' },
-      },
     },
 
     onChange: {
@@ -73,8 +59,6 @@ type Story = StoryObj<typeof Dropdown>
 
 export const Default: Story = {
   args: {
-    label: 'Default',
-    required: true,
     options: [
       { label: 'Retail Store Owner', value: 'retail' },
       { label: 'Convenience Store Owner', value: 'convenience' },
@@ -84,24 +68,47 @@ export const Default: Story = {
 
 export const Prefilled: Story = {
   args: {
-    label: 'Prefilled',
     value: 'convenience',
     options: mockOptions,
   },
 }
 
+export const WithLabel: Story = {
+  args: {
+    disabled: false,
+    options: mockOptions,
+  },
+  render: (args) => {
+
+    return (
+      <div class={"p-6 flex flex-col gap-1"}>
+
+        <Label htmlFor="owner-dropdown">Choose Owner </Label>
+        <Dropdown id='owner-dropdown' {...args} />
+      </div>
+    )
+  },
+}
+
 export const Required: Story = {
   args: {
-    label: 'Required',
+    disabled: false,
     options: mockOptions,
-    required: true,
-    value: '',
+  },
+  render: (args) => {
+
+    return (
+      <div class={"p-6 flex flex-col gap-1"}>
+        <Label htmlFor="owner-dropdown">Choose Owner <RequiredComponent /></Label>
+
+        <Dropdown id='owner-dropdown' {...args} />
+      </div>
+    )
   },
 }
 
 export const Disabled: Story = {
   args: {
-    label: 'Disabled Dropdown',
     disabled: true,
     options: mockOptions,
   },
