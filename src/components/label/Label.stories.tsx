@@ -18,7 +18,7 @@ const meta = {
         defaultValue: { summary: "Label Text" },
       },
     },
-    className: {
+    class: {
       control: "text",
       description: "Additional CSS classes to apply to the label",
       table: {
@@ -117,7 +117,7 @@ export const DifferentInputStates: Story = {
 export const CustomStyling: Story = {
   args: {
     children: "Custom Styled Label",
-    className: "font-bold text-3xl",
+    class: "font-bold text-3xl",
     htmlFor: "custom-input",
   },
   decorators: [
