@@ -22,7 +22,7 @@
     "@storybook/addon-a11y": "^10.1.11",
     "@storybook/addon-docs": "^10.1.11",
     "@storybook/preact-vite": "^10.1.11",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.3.2",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
     "jest": "^30.4.2",
@@ -31,6 +31,6 @@
     "ts-jest": "^29.4.11",
     "tsx": "^4.22.4",
     "typescript": "~5.9.3",
-    "vite": "^8.0.16"
+    "vite": "^8.1.2"
   }
 }
