@@ -1,7 +1,7 @@
 # Token Extractor
 
 The token extractor converts Figma Tokens JSON into CSS custom properties for
-FluxDS themes and responsive values. It is split into a small CLI entrypoint and
+Flux Design System themes and responsive values. It is split into a small CLI entrypoint and
 a reusable `FigmaTokenExtractor` class so the same conversion logic can be used
 from scripts, tests, or future tooling.
 
