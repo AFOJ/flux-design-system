@@ -1,10 +1,10 @@
 <div align="center">
-<h1>FluxDS</h1>
+<h1>Flux Design System</h1>
 <p><em>Multi-theme design system/component library featuring a Figma design token to CSS pipeline</em></p>
 
 <div>
-<a href="https://github.com/AFOJ/FluxDS/issues/new?title=[Bug]+">Report a bug</a> · 
-<a href="https://github.com/AFOJ/FluxDS/issues/new?title=[Feature]+">Submit a feature request</a>
+<a href="https://github.com/AFOJ/flux-design-system/issues/new?title=[Bug]+">Report a bug</a> ·
+<a href="https://github.com/AFOJ/flux-design-system/issues/new?title=[Feature]+">Submit a feature request</a>
 </br></br>
 </div>
 
@@ -29,7 +29,7 @@
 
 ## Overview
 
-### What is FluxDS?
+### What is Flux Design System?
 
 This system bridges the gap between Figma and CSS, making multi-theme design tokens easy to manage. It converts tokens directly into CSS variables while keeping the original Figma naming conventions for a better developer experience. These variables are then applied to components via Tailwind’s arbitrary values. To ensure a solid user experience, all components include built-in accessibility features like focus trapping and keyboard navigation.
 
@@ -62,13 +62,13 @@ The token to css script is designed to be selective about which data it processe
 Clone the repo:
 
 ```bash
-git clone https://github.com/AFOJ/FluxDS.git
+git clone https://github.com/AFOJ/flux-design-system.git
 ```
 
 Change to the project directory:
 
 ```bash
-cd FluxDS
+cd flux-design-system
 ```
 
 Install dependencies:
