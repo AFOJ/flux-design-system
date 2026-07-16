@@ -3,8 +3,8 @@
 <p><em>Multi-theme design system/component library featuring a Figma design token to CSS pipeline</em></p>
 
 <div>
-<a href="https://github.com/AFOJ/Flux-Design-System/issues/new?title=[Bug]+">Report a bug</a> ·
-<a href="https://github.com/AFOJ/Flux-Design-System/issues/new?title=[Feature]+">Submit a feature request</a>
+<a href="https://github.com/AFOJ/flux-design-system/issues/new?title=[Bug]+">Report a bug</a> ·
+<a href="https://github.com/AFOJ/flux-design-system/issues/new?title=[Feature]+">Submit a feature request</a>
 </br></br>
 </div>
 
@@ -62,13 +62,13 @@ The token to css script is designed to be selective about which data it processe
 Clone the repo:
 
 ```bash
-git clone https://github.com/AFOJ/Flux-Design-System.git
+git clone https://github.com/AFOJ/flux-design-system.git
 ```
 
 Change to the project directory:
 
 ```bash
-cd Flux-Design-System
+cd flux-design-system
 ```
 
 Install dependencies:
