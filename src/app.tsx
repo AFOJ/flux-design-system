@@ -4,7 +4,7 @@ export function App() {
       <h1 class="text-3xl font-bold">Hello 👋</h1>
       <a
         class={'text-teal-600 underline'}
-        href={'https://flux-design-system.netlify.app'}
+        href={'https://flux-design.ojabba.com'}
         target={"_blank"}
       >
         View Storybook here
