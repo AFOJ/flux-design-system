@@ -2,7 +2,7 @@ import Card from './'
 import type { Meta, StoryObj } from '@storybook/preact'
 
 const meta: Meta<typeof Card> = {
-  title: 'Components/Card',
+  title: 'Showcase/Card',
   component: Card,
   tags: ['autodocs'],
   argTypes: {
