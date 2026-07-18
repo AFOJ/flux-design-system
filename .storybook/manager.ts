@@ -1,10 +1,11 @@
 import { addons } from 'storybook/manager-api'
 import { create } from 'storybook/theming'
+import fluxLogo from '../public/flux.svg'
 
 addons.setConfig({
   theme: create({
     base: 'light',
-    brandImage: './flux.svg',
+    brandImage: fluxLogo,
     brandTitle: 'Flux Design System',
     brandTarget: '_self',
     colorPrimary: '#323338',
