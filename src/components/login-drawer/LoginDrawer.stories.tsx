@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/preact'
 
 type LoginDrawerProps = Parameters<typeof LoginDrawer>[0]
 const meta: Meta<LoginDrawerProps> = {
-  title: 'Components/LoginDrawer',
+  title: 'Showcase/Login Drawer',
   component: LoginDrawer,
   tags: ['autodocs'],
   argTypes: {
