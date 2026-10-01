@@ -19,7 +19,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.0",
     "@preact/preset-vite": "^2.10.3",
-    "@storybook/addon-a11y": "^10.1.11",
+    "@storybook/addon-a11y": "^10.6.0",
     "@storybook/addon-docs": "^10.1.11",
     "@storybook/preact-vite": "^10.1.11",
     "@tailwindcss/vite": "^4.3.2",
